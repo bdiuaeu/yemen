@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التطبيقات والاختبارات التفاعلية</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">CyberAcademy</div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="curriculum.html">المنهج الشامل</a></li>
+                <li><a href="labs.html" class="active">التطبيقات والاختبارات</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container" style="padding: 3rem 0;">
+        <h2 style="text-align: center; color: #38bdf8; margin-bottom: 2rem;">البطائق التفاعلية والاختبارات السريعة</h2>
+        
+        <!-- قسم البطائق التفاعلية -->
+        <section style="margin-bottom: 3rem;">
+            <h3 style="color: #f8fafc; margin-bottom: 1rem;">بطائق المفاهيم الأمنية (اضغط لاكتشاف الشرح)</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                
+                <div class="flashcard" onclick="toggleCard(this)" style="background: #111827; padding: 2rem; border-radius: 0.5rem; border: 1px solid #1f2937; cursor: pointer; min-height: 150px; display: flex; align-items: center; justify-content: center; text-align: center; transition: 0.3s;">
+                    <div>
+                        <h4 style="color: #38bdf8; margin-bottom: 0.5rem;">ما هو الجدار الناري (Firewall)؟</h4>
+                        <p class="card-answer" style="display: none; color: #94a3b8; font-size: 0.9rem;">نظام أمني يراقب ويتحكم في حركة المرور الواردة والصادرة بناءً على قواعد أمان مسبقة.</p>
+                    </div>
+                </div>
+
+                <div class="flashcard" onclick="toggleCard(this)" style="background: #111827; padding: 2rem; border-radius: 0.5rem; border: 1px solid #1f2937; cursor: pointer; min-height: 150px; display: flex; align-items: center; justify-content: center; text-align: center; transition: 0.3s;">
+                    <div>
+                        <h4 style="color: #38bdf8; margin-bottom: 0.5rem;">إيديولوجية المهاجم (Attacker Mindset)</h4>
+                        <p class="card-answer" style="display: none; color: #94a3b8; font-size: 0.9rem;">التفكير بالطريقة الاستباقية التي يتبعها المخترقون لاكتشاف الثغرات واستغلال نقاط الضعف قبل حدوثها.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- قسم اختبارات الفهم -->
+        <section style="background: #111827; padding: 2rem; border-radius: 0.5rem; border: 1px solid #1f2937;">
+            <h3>اختبار سريع: أساسيات الأمن السيبراني</h3>
+            <form id="quizForm" onsubmit="evaluateQuiz(event)" style="margin-top: 1.5rem;">
+                <div style="margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 0.5rem; font-weight: bold;">1. أي من التالي يُعد مثالاً على ثغرات تطبيقات الويب الشهيرة؟</p>
+                    <label style="display: block; color: #94a3b8; cursor: pointer;"><input type="radio" name="q1" value="wrong"> كابلات الألياف الضوئية</label>
+                    <label style="display: block; color: #94a3b8; cursor: pointer;"><input type="radio" name="q1" value="correct"> SQL Injection</label>
+                    <label style="display: block; color: #94a3b8; cursor: pointer;"><input type="radio" name="q1" value="wrong"> سرعة المعالج</label>
+                </div>
+                <button type="submit" class="btn-primary" style="border: none; cursor: pointer;">إرسال الإجابة وتقييم المستوى</button>
+            </form>
+            <p id="quizResult" style="margin-top: 1rem; font-weight: bold;"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - أكاديمية العرب الحديثة</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
